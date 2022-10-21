@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --hue: 194;
+  --color-select: hsla(var(--hue), 97%, 31%, 1);
+  --color-primary: #323238;
+  --color-modes: #E1E1E6;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 19.6rem 0 0 0;
+}
+
+.light-mode {
+  fill: var(--color-primary);
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+}
+
+.dark-mode {
+  fill: #FFFFFF;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+}
+
+main {
+  max-width: 82.1rem;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+#panel-time {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.time {
+  font-size: 12.6rem;
+
+  display: flex;
+
+  color: var(--color-primary);
+}
+
+button {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+  fill: var(--color-primary);
+}
+
+#panel-modes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.2rem;
+
+  background-color: var(--color-modes);
+  padding: 2.4rem;
+  border-radius: 2.4rem;
+  fill: var(--color-primary);
+}
+
+#panel-modes .mode .sel {
+  background-color: #FFFFFF;
+}
+
+.volume,
+.volume2,
+.volume3,
+.volume4 {
+  width: 9rem;
+  height: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+
+  color: var(--color-primary);
+  background-color: var(--color-primary);
+  border-radius: 0.5rem;
+}
+
+#select {
+  fill: #FFFFFF;
+  background-color: var(--color-select);
+}
+
+#select input {
+  fill: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+/* Configuration to Dark Mode */
+
+.body-dark {
+  background-color: #121214;
+}
+
+.time-dark {
+  color: #FFFFFF;
+}
+
+.controls-dark {
+  fill: #C4C4CC;
+}
+
+.mode-dark {
+  fill: #C4C4CC;
+  background-color: #29292E;
+}
+
+.mode-dark input {
+  fill: #FFFFFF;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 730px) {
+  main {
+    padding: 0 4rem;
+    flex-direction: column;
+  }
+
+  #panel-time {
+    margin-bottom: 8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding: 0 4rem;
+  }
+}
